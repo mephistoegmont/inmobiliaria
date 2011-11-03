@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inmobiliaria</title>
+  <%= stylesheet_link_tag    "application", "estilo" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="contenedor">
+	<div id="header">
+		<div id="logo">
+			<%= link_to (image_tag "logo.jpg", :size=>"200x150"), root_path %>
+		</div>
+		<div id="titulo">
+			<h1>Inmobiliaria</h1>
+		</div>
+		<div id="btns">
+			
+			<%= link_to "Noticias", anuncios_path %>
+			<%= link_to "Nosotros", nosotros_path %>
+			<%= link_to "Categorias", categorias_path %>
+			<%= link_to "Contacto", contacto_path %>
+		</div>
+	</div>
+</div>
+
+<%= yield %>
+</div>
+</body>
+</html>

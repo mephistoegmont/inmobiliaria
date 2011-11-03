@@ -1,0 +1,20 @@
+<h3> Últimas Noticias</h3>
+
+  	<% @noticias = Anuncio.find(:all, :limit => 4, :order => "created_at DESC" )%>
+<ul>
+<% @noticias.each do |noticia| %>
+	<li>
+	<b><%= link_to noticia.titulo, noticia %></b><br>
+	<%= noticia.created_at.strftime("%e-%m-%Y") %><br>
+	
+	<% if !noticia.categoria.blank? %>
+	<i><%= link_to noticia.categoria.nombre, noticia.categoria %></i><br>
+	
+	<% end %>
+	
+	<%= noticia.contenido.truncate(140, :omission => "... ") %>
+	<%= link_to "Leer Mas", noticia %>
+	<br>
+	</li>
+<% end %>
+</ul>

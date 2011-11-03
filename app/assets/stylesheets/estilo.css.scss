@@ -1,0 +1,46 @@
+$rojo: blue;
+$azul: #199ee9;
+
+body
+{
+font-family:Arial;
+}
+
+#header
+{
+background-color:$azul;
+
+}
+
+#logo
+{
+width:200px;
+height:150px;
+float:left;
+}
+
+#titulo
+{
+height:150px;
+
+}
+
+
+
+#contenedor
+{
+width:960px;
+margin:0 auto;
+}
+
+#linkrojo
+{
+	color:$rojo;
+}
+
+#imagen
+{
+	border:10px dashed red;
+	
+}
+
